@@ -5,23 +5,18 @@ import styled from 'styled-components';
 import '../style/reset.css';
 import '../style/global.css';
 
-// Imported Images:
-import hero from '../images/hero.png'
+//Imported Images:
 
-//   ~   ~   ~
-//  ~  STYLES  ~
-//   ~   ~   ~
-
-const Container = styled.section`
-  background: pink;
-`
+// STYLES:
+// ________________________________________________
 
 
 export default class Home extends Component {
   render() {
     return (
-      <Container>
-      </Container>
+      <div>
+        
+      </div>
     );
   }
 }
