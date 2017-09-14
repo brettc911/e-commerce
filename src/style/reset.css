@@ -50,3 +50,9 @@ table {
 input:focus{
 	outline: none;
 }
+
+select{
+	outline: none;
+	-webkit-appearance:none;
+
+}

@@ -16,10 +16,19 @@ const Container = styled.section`
 `
 
 
-export default class Account extends Component {
+export default class WatchDisplay extends Component {
+  constructor(props){
+    super(props)
+
+    const watches = this.props.watches
+    console.log(watches);
+  }
+
   render() {
+
     return (
       <Container>
+        // DISPLAY SOME WATCHES
       </Container>
     );
   }

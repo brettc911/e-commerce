@@ -75,10 +75,9 @@ const Header = styled.header`
 
 const SignupDiv = styled.div`
   height: 217px;
-  padding: 0 141px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background: #f0f0f0;
   background-image: url(${footer_pattern});
 `
@@ -86,20 +85,21 @@ const SignupDiv = styled.div`
     color: #033D3C;
     font-size: 29px;
     font-family: 'Georgia';
+    margin-right: 44px;
   `
   const Form = styled.form`
     width: 530px;
     height: 54px;
     display: flex;
     flex-direction: row;
-    >input{
+     input{
       height: 100%;
       width: 59%;
       border: none;
       padding: 0 0 0 35px;
       font-size: 14px;
     }
-    >button{
+     button{
       float: right;
       width: 185px;
       height: 100%;
@@ -119,7 +119,6 @@ const Footer = styled.footer`
       padding-right: 31px;
     }
   `
-
 
 
 export default class BaseLayout extends Component {
@@ -162,10 +161,10 @@ export default class BaseLayout extends Component {
         </SignupDiv>
         <Footer>
           <SocialMedia>
-            <img src={instagram}></img>
-            <img src={facebook}></img>
-            <img src={pinterest}></img>
-            <img src={twitter}></img>
+            <img alt="" src={instagram}></img>
+            <img alt="" src={facebook}></img>
+            <img alt="" src={pinterest}></img>
+            <img alt="" src={twitter}></img>
           </SocialMedia>
           <MainNav className='main-nav'>
             <Link to='/men'>Men's</Link>

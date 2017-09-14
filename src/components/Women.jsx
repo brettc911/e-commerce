@@ -6,17 +6,14 @@ import '../style/reset.css';
 import '../style/global.css';
 
 // Imported Images:
-import hero from '../images/hero.png'
 
 
-//   ~   ~   ~
-//  ~  STYLES  ~
-//   ~   ~   ~
+// STYLES:
+// ________________________________________________
 
 const Container = styled.section`
   background: pink;
 `
-
 
 export default class Women extends Component {
   render() {
