@@ -54,5 +54,10 @@ input:focus{
 select{
 	outline: none;
 	-webkit-appearance:none;
-
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
 }

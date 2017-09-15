@@ -10,7 +10,7 @@ a{
   color: #6E6E6E;
 }
 
-.activeLink{
+a:hover{
   color: #B59E6A;
 }
 
@@ -37,4 +37,17 @@ __________________________________*/
   padding: none;
   text-transform: uppercase;
   font-size: 14px;
+}
+
+.empty{
+  height: 30px;
+  width: 30px;
+  background: url(../images/heart.svg);
+  background-repeat: no-repeat;
+}
+.solid{
+  height: 30px;
+  width: 30px;
+  background: url(../images/colored_heart.png);
+  background-repeat: no-repeat;
 }

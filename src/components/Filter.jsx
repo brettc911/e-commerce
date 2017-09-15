@@ -15,6 +15,8 @@ import WatchDisplay from './WatchDisplay'
 // ________________________________________________
 
 const FilterForm = styled.form`
+  border-bottom: #B8B8B8 solid 1px;
+  margin: 0 40px;
   height: 84px;
   display: flex;
   align-items: center;
@@ -121,7 +123,7 @@ export default class Filter extends Component {
           <div>
             <H2>Style:</H2>
             <select name="style" onChange={this.handleStyleChange}>
-              <option value={['casual', 'business']}>All</option>
+              <option value={['casual business']}>All</option>
               <option value={["casual"]}>Casual</option>
               <option value={["business"]}>Business</option>
             </select>
