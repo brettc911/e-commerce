@@ -8,13 +8,13 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 // Import Components
 import BaseLayout from './components/BaseLayout';
-import Men from './components/Men';
-import Women from './components/Women';
 import Collections from './components/Collections';
+import CollType from './components/CollType';
 import Sale from './components/Sale';
 import Press from './components/Press';
 import Home from './components/Home';
 import Account from './components/Account';
+import SingleWatch from './components/SingleWatch';
 
 
 ReactDOM.render(
@@ -22,8 +22,8 @@ ReactDOM.render(
   <BrowserRouter>
     <BaseLayout>
       <Switch>
-        <Route path="/men" component={Men}/>
-        <Route path="/women" component={Women}/>
+        <Route path="/collections/:type/:id" component={SingleWatch}/>
+        <Route path="/collections/:type" component={CollType}/>
         <Route path="/collections" component={Collections}/>
         <Route path="/sale" component={Sale}/>
         <Route path="/press" component={Press}/>

@@ -142,8 +142,8 @@ export default class BaseLayout extends Component {
           </Link>
 
           <MainNav className='main-nav'>
-            <Link to='/men'>Men's</Link>
-            <Link to='/women'>Women's</Link>
+            <Link to='/collections/men'>Men's</Link>
+            <Link to='/collections/women'>Women's</Link>
             <Link to='/collections'>Collections</Link>
             <Link to='/sales'>Sale</Link>
             <Link to='/press'>Press</Link>

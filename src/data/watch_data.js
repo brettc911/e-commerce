@@ -1,24 +1,33 @@
-//Imported Images:
-import watch1 from './watch_images/watch1.png';
-import watch2 from './watch_images/watch2.png';
-import watch3 from './watch_images/watch3.png';
-import watch4 from './watch_images/watch4.png';
-import watch5 from './watch_images/watch5.png';
-import watch6 from './watch_images/watch6.png';
-import watch7 from './watch_images/watch7.png';
-import watch8 from './watch_images/watch8.png';
-import watch9 from './watch_images/watch9.png';
-import watch10 from './watch_images/watch10.png';
-import watch11 from './watch_images/watch11.png';
-import watch12 from './watch_images/watch12.png';
+//Imported Men's Watches Images:
+import mw1 from './watch_images/mw1.png';
+import mw2 from './watch_images/mw2.png';
+import mw3 from './watch_images/mw3.png';
+import mw4 from './watch_images/mw4.png';
+import mw5 from './watch_images/mw5.png';
+import mw6 from './watch_images/mw6.png';
+import mw7 from './watch_images/mw7.png';
+import mw8 from './watch_images/mw8.png';
+import mw9 from './watch_images/mw9.png';
+import mw10 from './watch_images/mw10.png';
+import mw11 from './watch_images/mw11.png';
+import mw12 from './watch_images/mw12.png';
+
+//Imported Men's Watches Images:
+import ww1 from './watch_images/ww1.png';
+import ww2 from './watch_images/ww2.png';
+import ww3 from './watch_images/ww3.png';
+import ww4 from './watch_images/ww4.png';
 
 
 const allwatches = [
+
+  // MEN'S WATCHES
+  // __________________________________
   {
     id: '19428',
-    img: `${watch1}`,
+    img: `${mw1}`,
     name: "Venetian Rose Gold Leather Strap Men's Watch",
-    sex: 'men',
+    type: 'men',
     style: "business",
     color: "gold",
     size: "medium",
@@ -26,9 +35,9 @@ const allwatches = [
   },
   {
     id: '12649',
-    img: `${watch2}`,
+    img: `${mw2}`,
     name: "Toccata Black Dial Black Leather Strap Men's Watch",
-    sex: 'men',
+    type: 'men',
     style: "casual",
     color: "black",
     size: "medium",
@@ -36,9 +45,9 @@ const allwatches = [
   },
   {
     id: '12634',
-    img: `${watch3}`,
+    img: `${mw3}`,
     name: "Slimline White Dial Men's Leather Watch",
-    sex: 'men',
+    type: 'men',
     style: "business",
     color: "white",
     size: "medium",
@@ -46,9 +55,9 @@ const allwatches = [
   },
   {
     id: '12846',
-    img: `${watch4}`,
+    img: `${mw4}`,
     name: "Freelancer Chronograph Automatic Men's Watch",
-    sex: 'men',
+    type: 'men',
     style: "casual",
     color: "white",
     size: "medium",
@@ -56,9 +65,9 @@ const allwatches = [
   },
   {
     id: '19853',
-    img: `${watch5}`,
+    img: `${mw5}`,
     name: "Horological Smartwatch Men's Watch",
-    sex: 'men',
+    type: 'men',
     style: "casual",
     color: "gold",
     size: "small",
@@ -66,9 +75,9 @@ const allwatches = [
   },
   {
     id: '18263',
-    img: `${watch6}`,
+    img: `${mw6}`,
     name: "D’Orsay Style Gold Dial Men's Watch",
-    sex: 'men',
+    type: 'men',
     style: "casual",
     color: "gold",
     size: "small",
@@ -76,19 +85,19 @@ const allwatches = [
   },
   {
     id: '12740',
-    img: `${watch7}`,
+    img: `${mw7}`,
     name: "Automatic Black Dial Stainless Steel Men's Watch",
-    sex: 'men',
+    type: 'men',
     style: "business",
     color: "black",
     size: "small",
     price: 315.00,
   },
   {
-    id: '12740',
-    img: `${watch8}`,
+    id: '12729',
+    img: `${mw8}`,
     name: "Seamaster Automatic Dial Men's Watch",
-    sex: 'men',
+    type: 'men',
     style: "business",
     color: "white",
     size: "small",
@@ -96,9 +105,9 @@ const allwatches = [
   },
   {
     id: '10026',
-    img: `${watch9}`,
+    img: `${mw9}`,
     name: "Traditional Automatic Dial Men's Watch",
-    sex: 'men',
+    type: 'men',
     style: "casual",
     color: "white",
     size: "large",
@@ -106,9 +115,9 @@ const allwatches = [
   },
   {
     id: '13382',
-    img: `${watch10}`,
+    img: `${mw10}`,
     name: "Classics Index Automatic Men's Watch",
-    sex: 'men',
+    type: 'men',
     style: "casual",
     color: "black",
     size: "large",
@@ -116,9 +125,9 @@ const allwatches = [
   },
   {
     id: '18862',
-    img: `${watch11}`,
+    img: `${mw11}`,
     name: "Classics Index Automatic Men's Watch",
-    sex: 'men',
+    type: 'men',
     style: "business",
     color: "white",
     size: "large",
@@ -126,14 +135,58 @@ const allwatches = [
   },
   {
     id: '19662',
-    img: `${watch12}`,
+    img: `${mw12}`,
     name: "Explorer Black Dial Stainless Steel Men's Watch",
-    sex: 'men',
+    type: 'men',
     style: "business",
     color: "black",
     size: "large",
     price: 175.00,
   },
+
+  // WOMEN'S WATCHES
+  // __________________________________
+  {
+    id: '94839',
+    img: `${ww1}`,
+    name: "Gold Italian Leather Strap Women's Watch",
+    type: 'women',
+    style: "casual",
+    color: "white",
+    size: "small",
+    price: 120.00,
+  },
+  {
+    id: '11122',
+    img: `${ww2}`,
+    name: "D’Orsay Style Rose Gold Women's Watch",
+    type: 'women',
+    style: "business",
+    color: "gold",
+    size: "medium",
+    price: 220.00,
+  },
+  {
+    id: '37772',
+    img: `${ww3}`,
+    name: "Automatic Black Dial Women's Watch",
+    type: 'women',
+    style: "casual",
+    color: "black",
+    size: "large",
+    price: 315.00,
+  },
+  {
+    id: '82764',
+    img: `${ww4}`,
+    name: "Seamaster Automatic Dial Women's Watch",
+    type: 'women',
+    style: "business",
+    color: "gold",
+    size: "large",
+    price: 390.00,
+  },
+
 ]
 
 export default allwatches

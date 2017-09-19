@@ -2,6 +2,9 @@ body{
   margin: 0 auto;
 }
 
+body p{
+  line-height: 23px;
+}
 
 /*  LINKS
 __________________________________*/
@@ -50,4 +53,12 @@ __________________________________*/
   width: 30px;
   background: url(../images/colored_heart.png);
   background-repeat: no-repeat;
+}
+
+.inner_container{
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }

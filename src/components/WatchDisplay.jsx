@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { NavLink, Link } from 'react-router-dom';
 
 // Imported Styles:
 import '../style/reset.css';
@@ -30,14 +31,14 @@ const WatchContainer = styled.div`
 `
 
   const Watch = styled.li`
-    padding: 20px 0;
+    padding: 12px;
     border: #fff solid 6px;
     width: 308px;
     height: 456px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-between;
     &:hover{
       border: #CDB378 solid 6px;
     }
@@ -89,15 +90,19 @@ export default class WatchDisplay extends Component {
 
   render() {
     // Map over the array of watches
-    let watch = this.props.watches.map((w, index) => {
+    let watch = this.props.watches.map((w) => {
+      let sex = 'men'
+      if (w.sex !== 'men') sex = 'women'
       return (
-        <WatchContainer>
-          <Watch key={index}>
-            <Image src={w.img}></Image>
-            <Name>{w.name}</Name>
-            <Price>{w.price}</Price>
-            <div className='empty' onClick={this.handleFavoriteChange}></div>
-          </Watch>
+        <WatchContainer key={w.id}>
+            <Watch>
+              <Link className="inner_container" to={`/${sex}/${w.id}`}>
+                <Image src={w.img}></Image>
+                <Name>{w.name}</Name>
+                <Price>{w.price}</Price>
+              </Link>
+              <div className='empty' onClick={this.handleFavoriteChange}></div>
+            </Watch>
         </WatchContainer>
       )
     })

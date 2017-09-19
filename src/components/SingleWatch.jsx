@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { NavLink, Link } from 'react-router-dom';
+
+
 
 // Imported Styles:
 import '../style/reset.css';
@@ -37,22 +40,33 @@ const Banner = styled.div`
 // FUNCTIONALITY:
 // ________________________________________________
 
-const mensWatches = []
-allWatches.forEach(w => {
-  if (w.sex === 'men') mensWatches.push(w)
-})
 
-// 1) GET ONLY MEN'S WATCHES FROM DATA
-// 2) PASS MEN'S WATCHES DOWN TO FILTER Component
 
 export default class Men extends Component {
+  constructor(props){
+    super(props)
+
+    this.state = {
+      watch: {}
+    }
+
+  }
+
+  componentDidMount(){
+    let watchId = this.props.match.params
+    allWatches.forEach(w => {
+      w.id === watchId.id ? this.setState({watch: w}) : console.log('couldnt find watch')
+    })
+  }
+
+
   render() {
     return (
       <div className="container">
         <Banner>
           <H1>Men's Watches</H1>
         </Banner>
-        <Filter watches = {mensWatches}/>
+        <p>{this.state.watch.name}</p>
       </div>
     );
   }

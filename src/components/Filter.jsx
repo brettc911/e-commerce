@@ -66,11 +66,11 @@ export default class Filter extends Component {
     }
   }
 
-  handleWatchFiltering() {
+  handleWatchFiltering(props) {
 
     let filteredWatches = []
-
-    this.props.watches.forEach(w => {
+    console.log('watch filtering', props);
+    props.forEach(w => {
 
       let style = false
       let color = false
@@ -90,27 +90,46 @@ export default class Filter extends Component {
       filteredWatches.push(w)
     })
 
-    this.setState({displayWatches: filteredWatches}, ()=>console.log("First:", this.state.displayWatches))
+    this.setState({displayWatches: filteredWatches})
   }
 
   handleStyleChange(e) {
     let x = e.target.value.split(" ")
-    this.setState({style: x}, this.handleWatchFiltering)
+    this.setState({style: x}, ()=> this.handleWatchFiltering(this.props.watches))
   }
   handleColorChange(e) {
     let x = e.target.value.split(" ")
-    this.setState({color: x}, this.handleWatchFiltering)
+    this.setState({color: x}, ()=> this.handleWatchFiltering(this.props.watches))
   }
   handleSizeChange(e) {
     let x = e.target.value.split(" ")
-    this.setState({size: x}, this.handleWatchFiltering)
+    this.setState({size: x}, ()=> this.handleWatchFiltering(this.props.watches))
   }
-  handlePriceChange(e) {
+  handlePriceChange(e, ) {
     let x = e.target.value.split(" ")
-    this.setState({price: x}, this.handleWatchFiltering)
+    this.setState({price: x}, ()=> this.handleWatchFiltering(this.props.watches))
   }
 
-  componentDidMount() {this.handleWatchFiltering()}
+  componentWillMount() {
+    console.log('filter will mount');
+    this.handleWatchFiltering(this.props.watches)
+  }
+
+  componentWillReceiveProps(nextProps){
+    console.log('next props');
+    // Reset Select Elements:
+    document.querySelector('.style').value = ['casual business']
+    document.querySelector('.color').value = ['black gold white']
+    document.querySelector('.size').value = ['small medium large']
+    document.querySelector('.price').value = ['1 1000']
+    // Reset State:
+    this.setState({
+      style: ['casual','business'],
+      color: ['black', 'gold', 'white'],
+      size: ['small', 'medium', 'large'],
+      price: ['1', '1000']
+    }, ()=> this.handleWatchFiltering(nextProps.watches))
+  }
 
 
 
@@ -122,7 +141,7 @@ export default class Filter extends Component {
         <FilterForm>
           <div>
             <H2>Style:</H2>
-            <select name="style" onChange={this.handleStyleChange}>
+            <select className="style" onChange={this.handleStyleChange}>
               <option value={['casual business']}>All</option>
               <option value={["casual"]}>Casual</option>
               <option value={["business"]}>Business</option>
@@ -130,7 +149,7 @@ export default class Filter extends Component {
           </div>
           <div>
             <H2>Color:</H2>
-            <select name="color" onChange={this.handleColorChange}>
+            <select className="color" onChange={this.handleColorChange}>
               <option value={['black gold white']}>All</option>
               <option value={['black']}>Black</option>
               <option value={['gold']}>Gold</option>
@@ -139,7 +158,7 @@ export default class Filter extends Component {
           </div>
           <div>
             <H2>Size:</H2>
-            <select name="size" onChange={this.handleSizeChange}>
+            <select className="size" onChange={this.handleSizeChange}>
               <option value={['small medium large']}>All</option>
               <option value={['small']}>Small</option>
               <option value={['medium']}>Medium</option>
@@ -148,7 +167,7 @@ export default class Filter extends Component {
           </div>
           <div>
             <H2>Price:</H2>
-            <select name="" onChange={this.handlePriceChange}>
+            <select className="price" onChange={this.handlePriceChange}>
               <option value={['1 1000']}>All</option>
               <option value={['100 200']}>$100-$200</option>
               <option value={['200 300']}>$200-$300</option>
