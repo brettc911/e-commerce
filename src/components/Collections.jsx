@@ -48,7 +48,7 @@ const Banner = styled.div`
 //    - Change the Banner text and image, and the watches displayed
 
 
-export default class collections extends Component {
+export default class Collections extends Component {
   constructor(props){
     super(props)
   }

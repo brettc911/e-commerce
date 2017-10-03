@@ -97,10 +97,6 @@ export default class CollType extends Component {
       })
       this.setState({watches: womensWatches})
     }
-
-    // if (this.props.match.params.type === 'women') watchType = womensWatches
-    // if (this.props.match.params.type === 'kids') watchType = kidsWatches
-    // if (this.props.match.params.type === 'seasonal') watchType = seasonalWatches
   }
 
   componentWillMount(){
@@ -111,15 +107,17 @@ export default class CollType extends Component {
       this.setState({type: `${this.props.match.params.type}'s Watches`})
     }
     this.handleTypeChange(this.props.match.params.type)
+    window.scroll(0,0)
   }
 
   componentWillReceiveProps(nextProps){
-    if (nextProps .match.params.type === 'seasonal') {
+    if (nextProps.match.params.type === 'seasonal') {
       this.setState({type: `${nextProps.match.params.type} Watches`})
     } else {
       this.setState({type: `${nextProps.match.params.type}'s Watches`})
     }
     this.handleTypeChange(nextProps.match.params.type)
+    window.scroll(0,0)
   }
 
 

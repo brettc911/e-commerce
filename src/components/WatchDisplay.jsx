@@ -90,13 +90,13 @@ export default class WatchDisplay extends Component {
 
   render() {
     // Map over the array of watches
+    let sex = 'men'
     let watch = this.props.watches.map((w) => {
-      let sex = 'men'
-      if (w.sex !== 'men') sex = 'women'
+      if (w.type !== 'men') sex = 'women'
       return (
         <WatchContainer key={w.id}>
             <Watch>
-              <Link className="inner_container" to={`/${sex}/${w.id}`}>
+              <Link className="inner_container" to={`/collections/${sex}/${w.id}`}>
                 <Image src={w.img}></Image>
                 <Name>{w.name}</Name>
                 <Price>{w.price}</Price>

@@ -34,6 +34,7 @@ const Banner = styled.div`
     font-family: 'Georgia';
     font-size: 47px;
     font-weight: bold;
+    text-transform: capitalize;
   `
 
 
@@ -42,12 +43,13 @@ const Banner = styled.div`
 
 
 
-export default class Men extends Component {
+export default class SingleWatch extends Component {
   constructor(props){
     super(props)
 
     this.state = {
-      watch: {}
+      watch: {},
+      type: undefined
     }
 
   }
@@ -57,6 +59,12 @@ export default class Men extends Component {
     allWatches.forEach(w => {
       w.id === watchId.id ? this.setState({watch: w}) : console.log('couldnt find watch')
     })
+    if (this.props.match.params.type === 'seasonal') {
+      this.setState({type: `${this.props.match.params.type} Watches`})
+    } else {
+      this.setState({type: `${this.props.match.params.type}'s Watches`})
+    }
+    window.scroll(0,0)
   }
 
 
@@ -64,7 +72,7 @@ export default class Men extends Component {
     return (
       <div className="container">
         <Banner>
-          <H1>Men's Watches</H1>
+          <H1>{this.state.type}</H1>
         </Banner>
         <p>{this.state.watch.name}</p>
       </div>

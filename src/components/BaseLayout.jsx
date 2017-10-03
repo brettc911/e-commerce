@@ -167,8 +167,8 @@ export default class BaseLayout extends Component {
             <img alt="" src={twitter}></img>
           </SocialMedia>
           <MainNav className='main-nav'>
-            <Link to='/men'>Men's</Link>
-            <Link to='/women'>Women's</Link>
+            <Link to='/collections/men'>Men's</Link>
+            <Link to='/collections/women'>Women's</Link>
             <Link to='/collections'>Collections</Link>
             <Link to='/sales'>Sale</Link>
             <Link to='/press'>Press</Link>
